@@ -19,5 +19,8 @@ contract Faucet {
         address[] memory _funders = getAllFunders();
         return _funders[index];
     }
+    // external for functions call from outside
+    // public from inside of the contract
+
 
 }
