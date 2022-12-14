@@ -1,0 +1,19 @@
+//    function justTesting () external pure returns(uint) {
+//        return 2 + 2;
+//    }
+    // PURE || VIEW: read-only call, no gas fee.
+    // VIEW: function will not alter storage in any way
+    // PURE: it won't even read the storage state
+
+    // Transactions (can generate state changes) and require gas fee
+
+    // To talk to the node on the network you can make JSON-RPC http-calls
+
+///
+
+    PUBLIC vs EXTERNAL
+
+const instance = await Faucet.deployed()
+
+instance.addFunds({from: accounts[0], value: "2"})
+
