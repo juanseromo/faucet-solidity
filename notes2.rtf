@@ -1,0 +1,110 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2707
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fswiss\fcharset0 Helvetica-Bold;
+\f3\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red43\green39\blue36;\red250\green248\blue244;\red255\green255\blue255;
+\red25\green25\blue25;\red212\green212\blue212;\red23\green23\blue23;\red202\green202\blue202;\red140\green211\blue254;
+\red194\green126\blue101;\red167\green197\blue152;}
+{\*\expandedcolortbl;;\cssrgb\c22353\c20392\c18824;\cssrgb\c98431\c97647\c96471;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c12941\c12941\c12941;\cssrgb\c86275\c86275\c86275;\cssrgb\c11765\c11765\c11765;\cssrgb\c83137\c83137\c83137;\cssrgb\c61176\c86275\c99608;
+\cssrgb\c80784\c56863\c47059;\cssrgb\c70980\c80784\c65882;}
+\margl1440\margr1440\vieww15040\viewh13640\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Website receives some info from faucet that is on the blockchain sent by a JSON file named ABI (Application Binary Interface) \
+\
+Compile the faucet contract solidity to an ABI which contains byte code which will be migrated to the blockchain \
+\
+Instructions in the byte code that are not stored on the blockchain,\
+Initialisation of the byte code is not stored\
+\
+Then to migrate this byte code contract\
+\
+_____________________________\
+\
+\
+NPX TRUFFLE CONSOLE \
+\
+const instance = await Faucet.deployed()\
+\
+instance \
+\
+/////PUBLIC VARIABLES EXPORTED FROM THE CONTRACT \
+\
+const funds = await instance.funds()\
+\
+funds.toString()\
+\
+\'97\'97\'97\'97\'97\
+\
+\
+web3.jsnm: is a collection of libs that allow you to interact with a local or remote ethereum node. \
+\
+\
+\
+web3.eth.sendTransaction(\{from: accounts[0], to: \'93
+\f1\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+0x8257B818Fa1966E5530988FaaBa10650853839ac
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \'94, value: \'9310000000000000000000\'94\})\
+\
+web3.eth.getBlock("")\
+\
+discuse about nonce > target and proof of work\
+\
+\
+\'a0\'a0\'a0_____________________\
+\
+pure and view functions, no gas free\
+\
+view = It indicates that the function will not alter the storage in any way\
+pure = even more strict, indicating that it won\'92t even read the storage state\
+\
+ functions have modifiers called: external, pure, returns(type) \
+\
+// Transactions (can generate state changes) and require gas fee \
+// read-only call, no gas fee \
+\
+\
+\
+__________________\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qc\partightenfactor0
+
+\f2\b \cf0 \
+\
+To talk to the node on the network you can make JSON-RPC http calls 
+\f0\b0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+send following Body to Ganache URL: 
+\f3 \cf4 \cb5 \expnd0\expndtw0\kerning0
+http://127.0.0.1:7545
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb7 \expnd0\expndtw0\kerning0
+\{\cf8 \cb1 \
+\cb7     \cf9 "jsonrpc"\cf6 :\cf10 "2.0"\cf6 ,\cf8 \cb1 \
+\cb7     \cf9 "method"\cf6 :\cf10 "eth_sendTransaction"\cf6 ,\cf8 \cb1 \
+\cb7     \cf9 "params"\cf6 :[\{\cf8 \cb1 \
+\cb7         \cf9 "from"\cf6 :\cf8  \cf10 "0x974FABdE71AFB8942d42514C2c26CCA4329c6f55"\cf6 ,\cf8 \cb1 \
+\cb7         \cf9 "to"\cf6 :\cf8  \cf10 "0x270F7c174eE70297F64Ad60F8b51be13AeF1D823"\cf6 ,\cf8 \cb1 \
+\cb7         \cf9 "gas"\cf6 :\cf8  \cf10 "0x76c0"\cf6 ,\cf8 \cb1 \
+\cb7         \cf9 "gasPrice"\cf6 :\cf8  \cf10 "0x9184e72a000"\cf6 ,\cf8  \cb1 \
+\cb7         \cf9 "value"\cf6 :\cf8  \cf10 "0x8AC7230489E80000"\cf6 ,\cf8 \cb1 \
+\cb7         \cf9 "data"\cf6 :\cf8  \cf10 "0xa26759cb"\cf8 \cb1 \
+\cb7     \cf6 \}],\cf8 \cb1 \
+\cb7     \cf9 "id"\cf6 :\cf8  \cf11 1\cf8 \cb1 \
+\cf6 \cb7 \}\cf8 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\
+???????????/\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sa320\pardirnatural\partightenfactor0
+\cf0 Publicis Global Delivery / Sr. Frontend Developer (Jun 2022\'96 Currently)\
+\'95 Resolution of Agile tickets related to Frontend existing projects with React, Vue, RemixJS and NestJS.\
+\'95 Teamwork collaboration with excellent communication, providing feedback and sharing ideas for code improvement and problem solving in a short-term high importance project.\
+}
